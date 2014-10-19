@@ -16,7 +16,7 @@
           rel="stylesheet"/>
 
     <link rel="stylesheet" href="css/main.css"/>
-    <link rel="stylesheet" href="libs/highlight/styles/rainbow.css"/>
+    <link rel="stylesheet" href="libs/highlight/styles/tomorrow-night-bright.css"/>
     <script src="libs/highlight/highlight.pack.js"></script>
     <script>
         hljs.initHighlightingOnLoad();
@@ -97,17 +97,64 @@
             compiled into regular CSS syntax</p>
     </div>
 
-    <div class="step" data-x="2520" data-y="520" data-z="0">
+    <div class="step" data-x="2500" data-y="1620" data-z="0">
+        <small>Variables</small>
 <pre><code class="scss">
 $primary-color: #333;
 
-body {
+.my-class {
   color: $primary-color;
 }
 
 </code></pre>
     </div>
 
+
+    <div class="step" data-x="2500" data-y="2620" data-z="0">
+        <small>Nesting</small>
+<pre><code class="scss">
+.my-class span {
+  color: red;
+}
+.my-class p {
+  color: blue;
+}
+
+</code></pre>
+    </div>
+
+    <div class="step" data-x="2500" data-y="2620" data-z="0" data-rotate-y="90">
+        <small>Nesting</small>
+<pre><code class="scss">
+.my-class {
+  span {
+    color: red;
+  }
+  p {
+    color: blue;
+  }
+}
+
+</code></pre>
+    </div>
+
+    <div class="step" data-x="2500" data-y="3620" data-z="0">
+        <small>Mixins</small>
+<pre><code class="scss">
+@mixin my-border($color, $width) {
+  border-color: $color;
+  border-width: $width;
+  border-style: dashed;
+}
+
+p { @include my-border(red, 3px); }
+</code></pre>
+    </div>
+
+
+    <div class="step" data-x="4500" data-y="0" data-z="0">
+        <h1>Compass</h1>
+    </div>
 
     <!--
         
@@ -125,22 +172,6 @@ body {
         
     -->
 
-
-    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-         <pre><code class="scss">
-             $font-stack: Helvetica, sans-serif;
-             $primary-color: #333;
-
-             @mixin border-radius($radius) {
-             -webkit-border-radius: $radius;
-             -moz-border-radius: $radius;
-             -ms-border-radius: $radius;
-             border-radius: $radius;
-             }
-
-         </code></pre>
-
-    </div>
 
     <!--
         
