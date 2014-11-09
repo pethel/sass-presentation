@@ -92,7 +92,6 @@ $primary-color: #333;
     </div>
 
     <div class="step" data-x="2500" data-y="2620" data-z="0" data-rotate-y="90">
-        <small>Nesting</small>
 <pre><code class="scss">
 .my-class {
   span {
@@ -119,19 +118,22 @@ p { @include my-border(red, 3px); }
 </code></pre>
     </div>
 
-    <div class="step" data-x="2500" data-y="4620" data-z="0">
-        <small>Placeholder selectors</small>
+    <div class="step" data-x="2500" data-y="3620" data-z="0" data-rotate-y="90">
+
 <pre><code class="scss">
-%icon { display: block; margin: 0 .5em; }
-.error-icon {
-  @extend %icon;
-  /* error specific styles... */
+p {
+    border-color: red;
+    border-width: 3px;
+    border-style: dashed;
 }
 
 </code></pre>
     </div>
 
-    <div class="step" data-x="2500" data-y="5620" data-z="0">
+
+
+
+    <div class="step" data-x="2500" data-y="4620" data-z="0">
         <small>Control Directives & Expressions</small>
 <pre><code class="scss">
 @mixin myMixin($var) {
@@ -154,6 +156,7 @@ p { @include my-border(red, 3px); }
         </ul>
 
     </div>
+
 
     <!--
         
